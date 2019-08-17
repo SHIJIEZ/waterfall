@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Plugin WaterFall</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft Yahei";
+            color: #666;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 40px
+        }
+
+        .container>.items {
+            position: relative;
+        }
+
+        .container>.items>.item {
+            width: 232px;
+            position: absolute;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .container>.items>.item>img {
+            width: 100%;
+            display: block;
+            height: 250px
+        }
+
+        /* 下标为奇数的元素高度设置为350px 形成瀑布流 */
+        .container>.items>.item:nth-child(odd)>img {
+            width: 100%;
+            display: block;
+            height: 350px;
+        }
+
+        .container>.items>.item>p {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #8a8686;
+        }
+
+        .container>.btn {
+            width: 280px;
+            height: 40px;
+            margin: 30px auto;
+            text-align: center;
+            line-height: 40px;
+            background-color: #CCC;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .container>.loading {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items">
+            <div class="item">
+                <img src="./images/1.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/2.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/3.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/4.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/5.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/6.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/7.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/8.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/9.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/10.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/11.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/12.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/13.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/14.jpg">
+                <p>文字填写区域</p>
+            </div>
+            <div class="item">
+                <img src="./images/15.jpg">
+                <p>文字填写区域</p>
+            </div>
+        </div>
+        <div class="btn">正在加载中...</div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/waterfall.js"></script>
+    <script type="text/javascript">
+        $('.items').WaterFall(5);
+    </script>
+</body>
+
+</html>
